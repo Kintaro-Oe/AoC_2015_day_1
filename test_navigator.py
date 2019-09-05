@@ -7,6 +7,10 @@ class testNavigationMethods(unittest.TestCase):
         self.assertEqual(navigator.locate(''), 0)
         self.assertEqual(navigator.locate('('), 1)
         self.assertEqual(navigator.locate('(('), 2)
+        self.assertEqual(navigator.locate(')'), -1)
+        self.assertEqual(navigator.locate('))'), -2)
+
+
 
 
 # acceptance criteria
