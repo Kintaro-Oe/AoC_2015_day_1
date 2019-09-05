@@ -26,6 +26,8 @@ class testNavigationMethods(unittest.TestCase):
 
     def test_position(self):
         self.assertEqual(navigator.position('()', 1), 1)
+        self.assertEqual(navigator.position(')((', 1), 3)
+
 
 if __name__ == '__main__':
     unittest.main()
