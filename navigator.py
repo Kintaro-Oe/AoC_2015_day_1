@@ -13,4 +13,11 @@ def locate(directions):
 
     return floor
 
+# method - takes string input and floor integer then returns the index
+# position of the first time that floor is reached
+def position(input_string, floor_query):
+    return 1
+
+
+
 print(locate(file_opener()))
