@@ -13,11 +13,21 @@ def locate(directions):
 
     return floor
 
-# method - takes string input and floor integer then returns the index
-# position of the first time that floor is reached
 def position(input_string, floor_query):
-    return 1
+    if floor_query == 0:
+        return 0
+
+    floor = 0
+
+    for idx, char in enumerate(input_string, start=1):
+        if char == '(':
+            floor += 1
+        elif char == ')':
+            floor -= 1
+        if floor == floor_query:
+            return idx
+
+print(position(file_opener(), -1))
 
 
-
-print(locate(file_opener()))
+# print(locate(file_opener()))
